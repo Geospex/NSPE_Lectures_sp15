@@ -1,0 +1,32 @@
+body {
+  font-family: 'Roboto', serif;
+  background:#fff;
+  background-size:100%;
+  margin:0;
+  padding:0;
+  color:#F5F5F5;
+}
+
+h1, h2, h3, p { margin:0; }
+
+em, a {
+  font-style:normal;
+  color:#F5F5F5;
+}
+
+a {
+  background: #ff1759;
+  color:#000;
+  text-decoration:none;
+}
+
+img { width:100%; }
+
+div.slide {
+  padding:10%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  font-size:40px;
+  overflow:hidden;
+  background-size:100%;
+}

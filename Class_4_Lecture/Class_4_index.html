@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 4 | NSPE | Map Projections</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta charset="utf-8">
+
+        <link href="css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet" type="text/css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/pig.js"></script>
+        <script src="js/scrollchart.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    
+   	<body>
+        <canvas id="scroll-chart"></canvas>
+        
+        <div class="fullscreen slide">
+        <img class="large" src="img/1c4.png"/>
+        </div>
+        
+ 		<div class="slide">
+        <h1>Review of Class 3</h1>
+        <h2>Thematic Mapping<h2>
+        <img class="small" src="img/2c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h2>What does the term <em>choropleth</em> mean?<h2>
+        </div>
+        
+        <div class="slide">
+        <h2>What does the term <em>choropleth</em> mean?<h2>
+        <img class="small" src="img/5c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif" />
+        <h2>What is an <em>Ecological Fallacy?</em><h2>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif" />
+        <h2>What is an <em>Ecological Fallacy?</em><h2>
+        <img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/9c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/3c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>What problem is notated on the left, and how is it fixed on the right?<h3>
+        <img class="small" src="img/4c4.png" />
+        </div>
+       
+        <div class="slide">
+        <h1>Class 4</h1>
+        <h2>Map Projections<h2>
+        <img class="small" src="img/7c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/8c4.png" />
+        </div>
+        
+ 		<div class="slide">
+        <img class="small" src="img/10c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h2>A <em>"Developable Surface"</em> it is not....</h2>
+        <img class="small" src="img/12c4.png"/>
+        </div>
+
+		<div class="slide">
+        <img class="small" src="img/13c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/37c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/38c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/39c4.png" />
+        </div>
+        
+        </div>
+		</div><div class="slide">
+        <iframe frameborder="0" width="100%" height="600" src="https://gmaps-samples.googlecode.com/svn/trunk/poly/puzzledrag.html"></iframe>
+        </div>
+        
+		<div class="slide">
+		<img class="small" src="img/wedge.gif" />
+    	<h2>To get to a 'Flat Map' we have to go through a series of progressive steps
+    	= <em>Earth > Geoid > Ellipsoid > Reference Sphere > Plane</em></h2>
+        </div>
+
+		<div class="slide">
+        <img class="small" src="img/14c4.png"/>
+        </div>
+
+		<div class="slide">
+        <img class="small" src="img/earth.gif"/>
+        </div>
+
+		<div class="slide">
+        <img class="small" src="img/geoid.gif"/>
+        </div>
+
+		<div class="slide">
+		<img class="small" src="img/wedge.gif" />
+        <img class="small" src="img/ellipse.gif"/>
+        </div>
+        
+		<div class="slide">
+		<h3>How to get to Planar from Sphere?</h3>
+		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/15c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>Use a lightbulb!</h3>
+         <img class="small" src="img/16c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>What happens to the map units when transforming from GCS to PCS?</h3>
+		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/17c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>A painful process...resulting in geometric distortions</h3>
+        <img class="small" src="img/18c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h2>Different Projection Systems are good at some things, and bad at others....</h2>
+		<h3>Preserving <em>direction</em> (azimuthal or zenithal), a trait possible only from one or two points to every other point</h3>
+		<h3></h3>
+		<h3>Preserving <em>shape</em> locally (conformal or orthomorphic)</h3>
+		<h3></h3>
+		<h3>Preserving <em>area</em> (equal-area or equiareal or equivalent or authalic)</h3>
+		<h3></h3>
+		<h3>Preserving <em>distance</em> (equidistant), a trait possible only between one or two points and every other point</h3>
+		<h3></h3>
+		<h3>Preserving <em>shortest route</em>, a trait preserved only by the gnomonic projection</h3>
+		<h3></h3>
+		</div>
+
+ 		<div class="slide">
+        <h3>Projections fall in to the 'family' groupings; each 'family' typified by what they preserve...</h3>
+        <img class="small" src="img/20c4.png" />
+        </div>
+        
+        </div>
+		</div><div class="slide">
+        <iframe frameborder="0" width="100%" height="600" src=" https://www.jasondavies.com/maps/transition/"></iframe>
+        </div>
+        
+ 		<div class="slide">
+ 		<h3>Comparison of Map distortion @ South America </h3>
+        <img class="small" src="img/22c4.png" />
+        </div>
+
+		<div class="slide">
+        <h3>Projections are also grouped based on their 'Projection Surfaces' ...</h3>
+        <img class="small" src="img/23c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>A good example of a planar projection is a polar stereographic projection...</h3>
+        <img class="small" src="img/41c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/42c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>A good example of a cylindrical projection is - of course - the Mercator Projection...</h3>
+        <img class="small" src="img/43c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/44c4.png" />
+        </div>
+        
+        <div class="slide">
+        <h3>A good example of a conic projection is an Albers Equal Area Projection often used for USA...</h3>
+        <img class="small" src="img/45c4.png" />
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/46c4.png" />
+        </div>
+        
+		<div class="slide">
+        <h1>Map Projections</h1>
+        <h2>Datums & Coordinate Systems<h2>
+        <img class="small" src="img/24c4.png" />
+        </div>
+
+ 		<div class="slide">
+ 		<h3>'Center' of North America- Meades Ranch, Kansas | NAD27</h3>
+        <img class="small" src="img/29c4.png" />
+		</div>
+
+ 		<div class="slide">
+ 		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/28c4.png" />
+		</div>
+
+ 		<div class="slide">
+ 		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/30c4.png" />
+		</div>
+
+ 		<div class="slide">
+        <img class="small" src="img/34c4.png" />
+		</div>
+		
+		<div class="slide">
+ 		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/35c4.png" />
+		</div>
+		
+		<div class="slide">
+ 		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/36c4.png" />
+		</div>
+		
+		<div class="slide">
+  		<h3>Best known grid system of international scope = UTM</h3>
+ 		<img class="small" src="img/wedge_sm.gif" />
+        <img class="small" src="img/27c4.png" />
+        
+		</div>
+		<div class="slide">
+        <img class="small" src="img/31c4.png" />
+		</div>
+		
+        <div class="slide">
+        <h1>Map Projections</h1>
+        <h2>Break | Lab<h2>
+        </div>
+        
+        <div class="fullscreen slide">
+        <img class="large" src="img/47c4.png"/>
+        </div>
+    </body>
+</html>
