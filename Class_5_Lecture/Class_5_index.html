@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 5 | NSPE | Geospatial Data Types</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta charset="utf-8">
+
+        <link href="css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet" type="text/css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/pig.js"></script>
+        <script src="js/scrollchart.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    
+   	<body>
+        <canvas id="scroll-chart"></canvas>
+        
+        <div class="fullscreen slide">
+            
+         <img class="large" src="img/1c5.png"/>
+        </div>
+        
+ 		<div class="slide">
+        <h1>Review of Class 4</h1>
+        <h2>Map Projections<h2>
+        </div>
+            
+        <div class="slide">
+        <iframe width=100% height="550" src="https://www.youtube.com/embed/2LcyMemJ3dE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/2c5.png"/>
+        </div>
+            
+        <div class="slide">
+        <img class="small" src="img/ellipse.gif"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/3c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/4c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/5c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/6c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/9c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/10c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <h1>Class 5</h1>
+        <h2>GeoData: Conceptualising, Organizing and Using <em>DATA</em> in a spatial framework.<h2>
+        </div>
+            
+        <div class="slide">
+        <iframe width='100%' height='520' frameborder='0' id="iframe" src="https:&#x2F;&#x2F;amp.twimg.com&#x2F;amplify-web-player&#x2F;prod&#x2F;source.html?vmap_url=https%3A%2F%2Famp.twimg.com%2Fprod%2Fmultibr_v_1%2Fvmap%2F2015%2F02%2F17%2F21%2F909eb763-b022-4c5b-870c-fb43531cd125%2F0b739c38-1478-47b7-a710-a6d4c1a063d4.vmap&image_src=https%3A%2F%2Famp.twimg.com%2Fprod%2Fdefault%2F2015%2F02%2F17%2F21%2Ff9981b95-uploadedvideo_poster-5246.jpg&content_id=909eb763-b022-4c5b-870c-fb43531cd125&publisher_id=17338082&page=amplify_card"></iframe>
+        </div>
+            
+        <div class="fullscreen slide">
+        <img class="large" src="img/19c5.png"/>
+        </div>
+        
+        
+        <div class="slide">
+        <center><h6>The <em>SCALE/SPEED</em> of DATA today:</h6></center>
+        <center><h4> “The Scale of the emerging data deluge is illustrated              by the claim that [b]etween the dawn of cilivlization and 2003, we            only created <em>5 EXABYTES</em> of information; now we’re creating            that amount <em>EVERY TWO DAYS</em> .”</h4></center>
+        <center><h4><em>3,000 Years = Every 2 Days</em></h4></center>
+        <p align="right"><i>-Hal Varian, chief economist with Google                   </i></p>
+        </div>
+            
+        <div class="slide">
+        <center><h6>The <em>Buzz vs. Reality</em></h6></center>
+        <center><h4> “These new opportunities have sparked a veritable boom in what might be termed <em>data boosterism</em>; rallying calls as to the benefits and prospects of big, open and scaled small data, some of it justified, some pure hype and buzz.”</h4></center>
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div>
+        
+        <div class="slide">
+        <center><h6>DATA is NOT <em>Neutral</em></h6></center>
+        <center><h4>“While many analysts may accept data at face value, and treat them as if they are <em>neutral, objective, and pre-analytic in nature</em>, data are in fact framed technically, economically, ethically, temporally, spatially and philosophically. Data do not exist independently of the ideas, instruments, practices, contexts and knowleges used to generate, process and analyse them.</h4></center>
+               
+        <p align="right"><i>- Bowker 2005; Gitelman and Jackson 2013</i></p>
+        </div>
+      
+        
+	   <div class="slide">
+       <center><h6>DATA is NOT random- its completely <em>SELECTED</em></h6>          </center>
+            
+       <center><h4>“Data <em>harvested through measurement</em> are always a selection from the total sum of all possible data available- what we have chosen to take from all that could potentially be given. As such, data are inherently partial, selective and representative, and the distinguishing criteria used in their capture has consequence.”</h4></center>
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div>
+            
+       <div class="slide">
+        <center><h6>DATA is NOT facts or information per se, and in relation to computers (and GIS) needs to be <em>PROCESSED</em></h6></center>
+        <center><h4>“…from a computational position data are collections of binary elements that can be processed and transmitted electroncially….data constitute the inputs and outputs of computation but have to be <em>processed</em> to be turned into facts and information (for example, a DVD contains gigabytes of data but no facts or information per se) </h4></center>
+        <p align="right"><i>- Floridi, 2005</i></p>
+        </div>      
+            
+        <div class="slide">
+        <center><h6>Data > Information </h6></center> 
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/20c5.png"/>
+        </div>
+            
+        <div class="slide">
+        <center><h6>Data vary across <em>5 main attributes</em></h6></center>
+            <p>&nbsp;</p>
+            <ol><em>-Form</em> Qualitative vs. Quantitative</ol>
+              <p>&nbsp;</p>
+                <ol><em>-Structure</em> Structured, semi-structured or          unstructured</ol>
+              <p>&nbsp;</p>
+                <ol><em>-Source</em> Captured, derived, exhaust, transient</ol>
+              <p>&nbsp;</p>
+                <ol><em>-Producer</em> Primary, secondary, tertiary</ol>
+              <p>&nbsp;</p>
+                <ol><em>-Type</em> Indexical, attribute, metadata.</ol>
+               
+               <p align="right"><i>- R. Kitchin</i></p>
+        </div>    
+            
+            
+            
+        <div class="fullscreen slide">
+        <img class="large" src="img/quan_qual.png"/>
+        </div>
+            
+        <div class="slide">
+        <center><h6>Quantitative data is measured across <em>4 general categories</em>:</h6></center>
+            <p>&nbsp;</p>
+            <ol><em>-Nominal </em>&nbsp;Categorical > unmarried vs. married</ol>
+              <p>&nbsp;</p>
+            <ol><em>-Ordinal </em>&nbsp;Rank Order> low, medium, high</ol>
+              <p>&nbsp;</p>
+            <ol><em>-Interval </em>&nbsp;Measured across a certain scale> Temp across Celsius scale</ol>
+              <p>&nbsp;</p>
+            <ol><em>-Ratio </em>&nbsp;Scale posesses a true zero origin> Exam on a scale 0-100</ol>
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div>            
+            
+            
+        <div class="slide">
+        <img class="small" src="img/numbers1.png"/>
+        </div>
+        
+        <div class="slide">
+        <center><h6>Regardless of how you think about DATA, its @ the bottom of the <em>‘Knowledge Pyramid’</em></h6></center>    
+        <p>&nbsp;</p>
+        <img class="small" src="img/pyramid.png"/>
+        </div> 
+        
+        <div class="slide">
+        <center><h6> Databases and Data Infrastructures: where/how DATA is <em>stored, organized and put to work</em>- Not a benign process at all.</h6>         </center>    
+        <center><h4>“Data infrastructures host and link databases into a more complex sociotechnical structure. As with databases, there is <em>nothing inherent</em> or given about how such archiving and sharing structures are composed.”
+        </h4></center>
+               
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div> 
+            
+        <div class="fullscreen slide">
+        <img class="large" src="img/bigdatalight.jpg">
+        </div>    
+            
+            
+        <div class="slide">
+        <iframe width=100% height="550" src="https://www.youtube.com/embed/QpDfLoUHqE4" frameborder="0" allowfullscreen></iframe>
+        </div>  
+            
+            
+            
+        <div class="slide">
+        <center><h6> We can know Big Data by what it is NOT <em>(small data)           </em></h6></center>    
+        <center><h4>“Until [recently] the term <em>‘small data’</em> was rarely, if ever, used. Its deployment has arisen purely as the de facto oppositional term to so-called ‘big data’.”
+        </h4></center>
+               
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div> 
+    
+        <div class="slide">
+        <center><h6> The Big Data <em>hype</em> has effectively <em>masked criticism</em> of the emerging Big Data industry.</h6></center>    
+        <center><h4>“At present, <em>data brokers</em> are generally largely unregulated and are not required by law to provide individuals access to the data held about them, nor are they obliged to correct errors relating to those individuals (Singer 2012b).”
+        </h4></center>
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div> 
+ 
+         
+        <div class="slide">
+        <center><h6>What are the essential <em>characteristics</em> of Big Data?   </h6></center>    
+                           <p>&nbsp;</p>
+                           <p>&nbsp;</p>
+        <img class="small" src="img/Vs.png"/>
+        </div> 
+      
+            
+        <div class="fullscreen slide">
+        <img class="large" src="img/4vbd.jpg"/>
+        </div>                       
+             
+        <div class="fullscreen slide">
+        <img class="large" src="img/bluffdale.png"/>
+        </div>                       
+        
+        <div class="fullscreen slide">
+        <img class="large" src="img/opendata.png"/>
+        </div>  
+             
+        <div class="slide">
+        <center><h6> As a corollary to Big Data, the <em>Open Data Movement</em>... </h6></center>    
+        <center><h4>"The open data Movement seeks to radically transform this situation [closed and/or proprietary data], both opening up data for wider reuse, but also providing easy-to-use research tools that negate the need for specialist analytic skills. The movement is build on three principles: <em>openness, participation and collaboration</em> (White House 2009)."
+        </h4></center>
+        <p align="right"><i>- R. Kitchin</i></p>
+        </div> 
+ 
+        <div class="fullscreen slide">
+        <img class="large" src="img/5star1.png"/>
+        </div>  
+            
+        <div class="slide">
+        <img class="small" src="img/wedge.gif"/>
+        <h2>Once we get data, how do we <em>organize</em> it for performance/analysis in GIS?</h3>
+        </div>
+        
+        <div class="slide">
+        <h3>3 <em>'interfaces'</em> for data in ArcGIS...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/39c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <h3>3 typical data <em>formats/types</em> in ArcGIS...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/40c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/41c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/42c5.png"/>
+        </div>
+        
+         <div class="fullscreen slide">
+         <img class="large" src="img/52c5.png"/>
+        </div>
+        
+        <div class="slide">
+         <h3>Rows and Columns- the <em>cell</em> has an exact position within the x,y coordinate array</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/43c5.png"/>
+        </div>
+        
+        
+        <div class="slide">
+         <h3>The <em>cell size</em> represents the area covered on the ground and represented by a single cell. 
+         A higher spatial resolution implies that there are more pixels per unit area.</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/53c5.png"/>
+        </div>
+        
+        
+		<div class="slide">
+		<h3>Optimal spatial resolution depends on the <em>SCALE</em> and <em>PURPOSE</em> of your mapping/analysis...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/54c5.png"/>
+        </div>
+        
+        
+        <div class="slide">
+        <h3>Cells have <em>values</em>, and these can (but not always) be stored in an <em>attribute table</em>.</h3>
+        <h3>Values can represent quantities and qualities- location, reflectance, color, precipitation, elevation, ect.</h3>
+        <img class="small" src="img/55c5.png"/>
+        </div>
+        
+        
+        <div class="slide">
+         <h3>The <em>attribute table</em> can be developed further than just the cell values and counts of those values...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/44c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <h3>Both Vector and Raster can represent the same space; its their <em>models</em> that are different, and those <em>models</em>
+        have both advantages and disadvantages...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/56c5.gif"/>
+        </div>
+        
+         <div class="slide">
+         <h3>Same space, different models...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/57c5.png"/>
+        </div>
+        
+        <div class="slide">
+        <h3>...Not all Rasters are <em>useful</em> in GIS...</h3>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/45c5.gif"/>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge.gif"/>
+        <h2>Typical <em>types</em> of rasters....</h2>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/46c5.png"/>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <h3>Multi-Band Raster</h3>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/47c5.png"/>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <h3>Multi-Band Raster</h3>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/48c5.png"/>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <h3>Thematic Raster (Single-Band)</h3>
+        </div>
+        
+        
+        <div class="slide">
+        <img class="small" src="img/49c5.png"/>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <h3><em>Continous</em> Data= usually NO attribute table</h3>
+        <h3><em>Discrete</em> Data= usually DOES have attribute table</h3>
+        </div>
+        
+        <div class="slide">
+        <img class="small" src="img/wedge_sm.gif"/>
+        <img class="small" src="img/50c5.png"/>
+        <img class="small" src="img/wedge_sm.gif"/>
+        <h3>Rasters = Many Purposes/Uses</h3>
+        </div>
+    
+       	<div class="slide">
+        <h1>Break</h1>
+        <h2>Lab - Rasters | ArcCatalog | ArcToolBox | GDB<h2>
+        </div>
+    </body>
+</html>
