@@ -6,4 +6,5 @@ Lectures:
 * Lecture 2: Cartography
 * Lecture 3: Thematic Mapping
 * Lecture 4: Map Projections
+* Lecture 5: Data
 
