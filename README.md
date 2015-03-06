@@ -7,4 +7,5 @@ Lectures:
 * Lecture 3: Thematic Mapping
 * Lecture 4: Map Projections
 * Lecture 5: Data
+* Lecture 6: Geoprocessing | GIS Analysis
 
