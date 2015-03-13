@@ -8,4 +8,5 @@ Lectures:
 * Lecture 4: Map Projections
 * Lecture 5: Data
 * Lecture 6: GIS Analysis | Geoprocessing
+* Lecture 7: Mapping Vulnerability
 
