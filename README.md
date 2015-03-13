@@ -7,9 +7,7 @@ Lectures:
 * Lecture 3: Thematic Mapping
 * Lecture 4: Map Projections
 * Lecture 5: Data
-<<<<<<< HEAD
 * Lecture 6: Geoprocessing | GIS Analysis
-=======
-* Lecture 6: GIS Analysis | Geoprocessing
->>>>>>> master
+* Lecture 7: Mapping Vulnerability
+
 
