@@ -11,5 +11,6 @@ Lectures:
 * Lecture 7: Mapping Vulnerability
 * Lecture 8: Suitability
 * Lecture 9: OSM
+* Lecture 10: Remote Sensing & Density Surfaces
 
 
