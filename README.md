@@ -9,5 +9,7 @@ Lectures:
 * Lecture 5: Data
 * Lecture 6: Geoprocessing | GIS Analysis
 * Lecture 7: Mapping Vulnerability
+* Lecture 8: Suitability
+* Lecture 9: OSM
 
 
